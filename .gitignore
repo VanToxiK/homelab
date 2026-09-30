@@ -1,0 +1,24 @@
+# Secretos y claves (nunca deben subirse)
+*.pem
+*.key
+id_*
+!id_*.pub.example
+*.ppk
+.env
+*.env
+secrets/
+
+# Copias de seguridad y volcados
+*.bak
+*.old
+*.sql
+*.tar.gz
+
+# Ficheros de sistema y editores
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*~

@@ -1,0 +1,12 @@
+// Ruta: /etc/apt/apt.conf.d/20auto-upgrades
+//
+// Se genera con: sudo dpkg-reconfigure -plow unattended-upgrades
+// Activa la ejecución diaria de unattended-upgrades, que por defecto
+// aplica solo las actualizaciones de seguridad de Debian.
+//
+// Comprobar con una simulación: sudo unattended-upgrade --dry-run --debug
+
+// Actualiza la lista de paquetes cada día.
+APT::Periodic::Update-Package-Lists "1";
+// Instala automáticamente las actualizaciones permitidas cada día.
+APT::Periodic::Unattended-Upgrade "1";

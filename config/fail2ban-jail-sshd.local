@@ -1,0 +1,21 @@
+# Ruta: /etc/fail2ban/jail.d/sshd.local
+#
+# Jail de Fail2ban para SSH. En Debian 13 no se usa /var/log/auth.log por
+# defecto (no hay rsyslog en instalaciones mínimas), así que se lee el
+# journal de systemd.
+#
+# Los valores de bantime/findtime/maxretry son los habituales; ajústalos
+# a tu gusto. Aplicar: sudo systemctl restart fail2ban
+# Comprobar:           sudo fail2ban-client status sshd
+
+[sshd]
+enabled  = true
+# Lee los logs del journal de systemd en lugar de un fichero.
+backend  = systemd
+# Puerto vigilado.
+port     = ssh
+# Nº de fallos permitidos dentro de la ventana "findtime" antes de banear.
+maxretry = 5
+findtime = 10m
+# Duración del bloqueo.
+bantime  = 1h
