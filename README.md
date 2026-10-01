@@ -1,5 +1,7 @@
 # Homelab: servidor casero con seguridad desde el diseño
 
+<img src="docs/img/homelab-portada.png" alt="Portada del proyecto Homelab: servidor Debian bastionado" width="100%">
+
 Proyecto personal para reconvertir un portátil antiguo en un servidor doméstico, reconstruido desde cero y bastionado desde la primera hora.
 
 ## Objetivo
